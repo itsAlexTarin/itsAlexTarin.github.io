@@ -1,0 +1,76 @@
+/**
+ * =============================================================================
+ * ТИПОГРАФИКА
+ * Мотивы печатной машинки
+ * =============================================================================
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-mono);
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    line-height: 1.6;
+    font-size: var(--font-size-base);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* === ЗАГОЛОВКИ === */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.site-title {
+    font-size: var(--font-size-xxl);
+    color: var(--color-text-primary);
+    text-shadow: 2px 2px 0 var(--color-accent-dim);
+}
+
+.block-title {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+}
+
+/* === ТЕКСТ === */
+p {
+    margin-bottom: var(--spacing-md);
+}
+
+/* === ЭФФЕКТ ПЕЧАТНОЙ МАШИНКИ === */
+.typewriter-effect {
+    animation: typing 0.1s steps(40, end);
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* === ССЫЛКИ === */
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-accent);
+    transition: all var(--transition-fast);
+}
+
+a:hover {
+    color: var(--color-accent-hover);
+    border-bottom-color: var(--color-accent-hover);
+}
+
+/* === ВЫДЕЛЕНИЕ ТЕКСТА === */
+::selection {
+    background-color: var(--color-accent);
+    color: var(--color-bg-primary);
+}
