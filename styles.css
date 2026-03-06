@@ -11,7 +11,7 @@
     --color-border: #FEFEFE;
     
     --font-main: 'PT Mono', monospace;
-    --font-typo: 'IBM Plex Mono', cursive;
+    --font-typo: 'IBM Plex Mono', monospace;
     --size-text: 13px;
 }
 
