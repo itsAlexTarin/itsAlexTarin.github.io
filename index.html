@@ -1,232 +1,309 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex el Leaf</title>
+    <title>Бюро Расследований | Дело № 734</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-<body>
-
+<body class="dark-theme">
     <div class="document-page">
-        
-        <!-- HEADER -->
-        <header class="doc-header">
+        <!-- HEADER [UNCHANGED] -->
+        <header class="doc-header fade-in">
             <div class="meta-row">
-                <span>UPDATE: 2026.03.06</span>
-                <span>CLASS: RESTRICTED</span>
-                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">на свет</button>
+                <span>СТАТУС: ОТКРЫТО</span>
+                <button id="theme-toggle" class="theme-toggle">на свет</button>
             </div>
-            <div style="height: 30px;">
-                <h1 class="main-title typewriter-target">Alex el Leaf</h1>
-            </div>
-            
+            <h1 class="main-title typewriter-target">БЮРО [Alex el Leaf]</h1>
             <div class="separator"></div>
+            <nav class="doc-nav">
+                <a href="#profile" class="nav-link">Досье</a>
+                <a href="#log" class="nav-link">Журнал</a>
+                <a href="#transcripts" class="nav-link">Стенограммы</a>
+                <a href="#press" class="nav-link">Пресса</a>
+                <a href="#archive" class="nav-link">Архив</a>
+                <a href="#comms" class="nav-link">Связь</a>
+            </nav>
         </header>
 
-        <!-- NAVIGATION -->
-        <nav class="doc-nav">
-            <a href="#profile" class="nav-link">[01] Обо мне</a>
-            <a href="#timeline" class="nav-link">[02] Опыт работы</a>
-            <a href="#stats" class="nav-link">[03] Навыки</a>
-            <a href="#quests" class="nav-link">[04] QUESTS</a>
-            <a href="#works" class="nav-link">[05] Портфолио</a>
-            <a href="#comms" class="nav-link">[06] Контакты</a>
-        </nav>
+        <!-- PROFILE / INTRO [REDESIGNED] -->
+        <section id="profile" class="doc-section fade-in">
+            <h2 class="section-title">/// ЛИЧНОЕ ДЕЛО</h2>
+            
+            <div class="case-file">
+                <div class="case-file-header" tabindex="0">
+                    <span class="file-tab">[ ПАПКА: ОБЩАЯ ИНФОРМАЦИЯ ]</span>
+                    <span class="file-toggle">▼</span>
+                </div>
+                <div class="case-file-content">
+                    <div class="file-grid">
+                        <div class="file-column">
+                            <p class="file-label">ИМЯ</p>
+                            <p class="file-value">Александр</p>
+                        </div>
+                        <div class="file-column">
+                            <p class="file-label">СТАТУС</p>
+                            <p class="file-value">Действующий детектив</p>
+                        </div>
+                        <div class="file-column">
+                            <p class="file-label">СПЕЦИАЛИЗАЦИЯ</p>
+                            <p class="file-value">Цифровые следы, <span class="text-muted">OSINT</span>, восстановление данных</p>
+                        </div>
+                    </div>
+                    <p class="file-note">Конфиденциальность гарантируется. Все материалы хранятся в зашифрованном виде.</p>
+                </div>
+            </div>
 
-        <div class="separator"></div>
+            <div class="case-file">
+                <div class="case-file-header" tabindex="0">
+                    <span class="file-tab">[ ПАПКА: МЕТОДОЛОГИЯ ]</span>
+                    <span class="file-toggle">▼</span>
+                </div>
+                <div class="case-file-content">
+                    <p class="file-intro">Моя работа строится на трёх принципах:</p>
+                    <ul class="method-list">
+                        <li><span class="method-num">01</span> <span class="method-text">Тщательный <span class="text-highlight">анализ</span> исходных данных</span></li>
+                        <li><span class="method-num">02</span> <span class="method-text">Перекрёстная <span class="text-highlight">проверка</span> источников</span></li>
+                        <li><span class="method-num">03</span> <span class="method-text">Дискретная <span class="text-highlight">передача</span> результатов</span></li>
+                    </ul>
+                    <p class="file-disclaimer">Каждое дело уникально. Подход адаптируется под конкретную ситуацию.</p>
+                </div>
+            </div>
 
-        <!-- PROFILE SECTION -->
-        <section id="profile" class="doc-section">
-            <h2 class="section-title">/// Обо мне</h2>
-            <div class="text-block">
-                <p>ИМЯ: Александр</p>
-                <p>ПСЕВДОНИМ: Alex el Leaf</p>
-                <p>ЧАСОВОЙ ПОЯС: UTC+7</p>
-                <p>СТАТУС: Открыт к предложениям</p>
-                <p>ОПЫТ РАБОТЫ: с 2019 года</p>
-                <br>
-                <p class="note">
-                    NOTE: Приветствую! Предложения о работе направляй в личку тг.
-                </p>
+            <div class="case-file">
+                <div class="case-file-header" tabindex="0">
+                    <span class="file-tab">[ ПАПКА: УСЛОВИЯ ]</span>
+                    <span class="file-toggle">▼</span>
+                </div>
+                <div class="case-file-content">
+                    <div class="terms-grid">
+                        <div class="term-item">
+                            <span class="term-title">КОНФИДЕНЦИАЛЬНОСТЬ</span>
+                            <span class="term-desc">Абсолютная. Никаких логов, никаких третьих лиц.</span>
+                        </div>
+                        <div class="term-item">
+                            <span class="term-title">КОММУНИКАЦИЯ</span>
+                            <span class="term-desc">Только через защищённые каналы. Без лишних деталей.</span>
+                        </div>
+                        <div class="term-item">
+                            <span class="term-title">ОПЛАТА</span>
+                            <span class="term-desc">Обсуждается индивидуально. Предоплата 50%.</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <div class="separator"></div>
-
-        <!-- TIMELINE SECTION -->
-        <section id="timeline" class="doc-section">
-            <h2 class="section-title">/// Журнал достижений</h2>
+        <!-- TIMELINE / CASE LOG [UNCHANGED] -->
+        <section id="log" class="doc-section fade-in">
+            <h2 class="section-title">/// ЖУРНАЛ СОБЫТИЙ [ДЕЛО № 734]</h2>
             <div class="timeline-container">
                 <div class="timeline-line"></div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">12.02.2024</span>
+                        <span class="timeline-event">ПЕРВИЧНЫЙ КОНТАКТ</span>
+                        <span class="timeline-note">Клиент А. оставил конверт в почтовом ящике.
+                            Внутри только ключ и координаты.</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">03.03.2024</span>
+                        <span class="timeline-event">ВЗЛОМ АРХИВА</span>
+                        <span class="timeline-note">Доступ к серверу получен. Обнаружены аномалии в
+                            логах за 2019 год.</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">15.04.2024</span>
+                        <span class="timeline-event">ТИШИНА</span>
+                        <span class="timeline-note">Связь с информатором В. потеряна. Последний
+                            сигнал зафиксирован в секторе 4.</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">ТЕКУЩАЯ ДАТА</span>
+                        <span class="timeline-event">ОЖИДАНИЕ</span>
+                        <span class="timeline-note">Файлы зашифрованы. Ключ найден, но дверь пока
+                            закрыта.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRANSCRIPTS / NEWSPAPERS [REDESIGNED] -->
+        <section id="transcripts" class="doc-section fade-in">
+            <h2 class="section-title">/// СТенограммы ПЕРЕГОВОРОВ</h2>
+            
+            <div class="newspaper-stack">
                 
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">2024.10</span>
-                        <span class="timeline-event">PORTFOLIO REVISION INITIATED</span>
-                        <span class="timeline-note">[CURRENT PHASE]</span>
+                <!-- Newspaper 1 -->
+                <article class="newspaper" data-expanded="false">
+                    <div class="newspaper-cover">
+                        <span class="newspaper-title">ЕЖЕДНЕВНЫЙ ОТЧЁТ №47</span>
+                        <span class="newspaper-date">14.03.2024</span>
+                        <span class="newspaper-hint">[ НАЖМИТЕ ДЛЯ ПРОСМОТРА ]</span>
                     </div>
-                </div>
+                    <div class="newspaper-content">
+                        <header class="np-header">
+                            <h3 class="np-headline">ОПЕРАЦИЯ «ТИХИЙ ШЁПОТ»</h3>
+                            <p class="np-subhead">Эксклюзив: детали закрытого расследования</p>
+                        </header>
+                        <div class="np-image-placeholder">
+                            <span class="np-img-caption">[ФОТО: МЕСТО ВСТРЕЧИ]</span>
+                        </div>
+                        <div class="np-columns">
+                            <p><strong>Источник К.</strong> сообщил о подозрительной активности в секторе <span class="redacted">██████</span>. По его словам, фигуранты использовали <span class="redacted">зашифрованный канал</span> для передачи данных.</p>
+                            <p>Детектив запросил дополнительные доказательства. В ответ было получено сообщение: <em>«Всё идёт по плану. Ждите сигнала»</em>.</p>
+                            <p>На текущий момент статус операции: <span class="text-highlight">ВЫПОЛНЯЕТСЯ</span>. Дальнейшие детали классифицированы.</p>
+                        </div>
+                        <footer class="np-footer">
+                            <span class="np-classification">УРОВЕНЬ ДОСТУПА: [RESTRICTED]</span>
+                        </footer>
+                    </div>
+                </article>
 
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">2024.06</span>
-                        <span class="timeline-event">NEW PROJECT ARCHIVE OPENED</span>
-                        <span class="timeline-note">[COMPLETED]</span>
+                <!-- Newspaper 2 -->
+                <article class="newspaper" data-expanded="false">
+                    <div class="newspaper-cover">
+                        <span class="newspaper-title">СЛУЖЕБНАЯ ЗАПИСКА №12</span>
+                        <span class="newspaper-date">28.03.2024</span>
+                        <span class="newspaper-hint">[ НАЖМИТЕ ДЛЯ ПРОСМОТРА ]</span>
                     </div>
-                </div>
+                    <div class="newspaper-content">
+                        <header class="np-header">
+                            <h3 class="np-headline">ПЕРЕХВАТ: ДИАЛОГ С «ТЕНЬЮ»</h3>
+                            <p class="np-subhead">Расшифровка аудиозаписи от 27.03</p>
+                        </header>
+                        <div class="np-image-placeholder">
+                            <span class="np-img-caption">[АУДИО: ВОЛНОВАЯ ФОРМА]</span>
+                        </div>
+                        <div class="np-columns">
+                            <p><strong>02:14</strong> — «Вы уверены, что это безопасно?»</p>
+                            <p><strong>02:17</strong> — «Безопасность — иллюзия. Важно, чтобы следы вели не на нас.»</p>
+                            <p><strong>02:23</strong> — «А если <span class="redacted">███████████</span> узнает?»</p>
+                            <p><strong>02:25</strong> — «Тогда у нас будет проблема. Но пока — <span class="text-highlight">всё под контролем</span>.»</p>
+                            <p><strong>02:31</strong> — [СИГНАЛ ПОТЕРЯН]</p>
+                        </div>
+                        <footer class="np-footer">
+                            <span class="np-classification">СТАТУС: [ВЕРИФИЦИРОВАНО]</span>
+                        </footer>
+                    </div>
+                </article>
 
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">2023.12</span>
-                        <span class="timeline-event">SYSTEM UPGRADE VERIFIED</span>
-                        <span class="timeline-note">[COMPLETED]</span>
+                <!-- Newspaper 3 -->
+                <article class="newspaper" data-expanded="false">
+                    <div class="newspaper-cover">
+                        <span class="newspaper-title">МЕМОРАНДУМ №03</span>
+                        <span class="newspaper-date">05.04.2024</span>
+                        <span class="newspaper-hint">[ НАЖМИТЕ ДЛЯ ПРОСМОТРА ]</span>
                     </div>
-                </div>
+                    <div class="newspaper-content">
+                        <header class="np-header">
+                            <h3 class="np-headline">АНАЛИЗ: ЦИФРОВОЙ СЛЕД</h3>
+                            <p class="np-subhead">Техническое заключение по метаданным</p>
+                        </header>
+                        <div class="np-image-placeholder">
+                            <span class="np-img-caption">[ГРАФИК: ВРЕМЕННАЯ ШКАЛА]</span>
+                        </div>
+                        <div class="np-columns">
+                            <p>Анализ показал аномальную активность в период <span class="text-highlight">03.03–15.03</span>. Зафиксировано <strong>17 попыток</strong> несанкционированного доступа.</p>
+                            <p>Источник трафика: <span class="redacted">████████████████</span>. Использовались прокси-серверы из <span class="redacted">███</span> регионов.</p>
+                            <p>Рекомендация: усилить мониторинг, подготовить <span class="text-muted">контрмеры</span>. Детали — в приложении <span class="redacted">[УДАЛЕНО]</span>.</p>
+                        </div>
+                        <footer class="np-footer">
+                            <span class="np-classification">ПРИЛОЖЕНИЕ: [ОТСУТСТВУЕТ]</span>
+                        </footer>
+                    </div>
+                </article>
 
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">2019.01</span>
-                        <span class="timeline-event">OPERATION COMMENCED</span>
-                        <span class="timeline-note">[INITIATION]</span>
-                    </div>
-                </div>
             </div>
         </section>
 
-        <div class="separator"></div>
-
-        <!-- STATS SECTION -->
-        <section id="stats" class="doc-section">
-            <h2 class="section-title">/// CHARACTER METRICS</h2>
-            <div class="text-block">
-                <div class="stat-row">
-                    <span class="stat-label">LEVEL</span>
-                    <span class="stat-value">05</span>
-                </div>
-                <div class="stat-row">
-                    <span class="stat-label">EXPERIENCE</span>
-                    <span class="stat-bar">[||||||......] 60%</span>
-                </div>
-                <div class="separator-mini"></div>
-                <div class="stat-grid">
-                    <div class="stat-item">
-                        <span class="stat-label">STR</span>
-                        <span class="stat-value">08</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-label">INT</span>
-                        <span class="stat-value">15</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-label">DEX</span>
-                        <span class="stat-value">12</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-label">CHA</span>
-                        <span class="stat-value">10</span>
-                    </div>
-                </div>
-                <div class="separator-mini"></div>
-                <div class="achievements">
-                    <p class="sub-header">ACHIEVEMENTS UNLOCKED:</p>
-                    <ul class="simple-list">
-                        <li>[x] SURVIVOR (2019)</li>
-                        <li>[x] CREATOR (2020)</li>
-                        <li>[ ] MASTERMIND (LOCKED)</li>
-                    </ul>
-                </div>
+        <!-- PRESS / CLIPPINGS [UNCHANGED] -->
+        <section id="press" class="doc-section fade-in">
+            <h2 class="section-title">/// ВЫРЕЗКИ ИЗ ПРЕССЫ</h2>
+            <div class="press-clipping">
+                <p class="clipping-source">ВЕСТНИК ТЕХНОЛОГИЙ | 2023</p>
+                <p class="clipping-headline">КРУПНАЯ УТЕЧКА ДАННЫХ ОСТАЛАСЬ НЕРАСКРЫТОЙ</p>
+                <p class="clipping-text">...эксперты полагают, что следы были намеренно затерты
+                    профессионалом высокого класса. Полиция бессильно разводит руками...</p>
+            </div>
+            <div class="press-clipping">
+                <p class="clipping-source">ГОРОДСКОЙ ОБЗОР | 2024</p>
+                <p class="clipping-headline">ТАИНСТВЕННЫЙ БЛОГЕР ВЕРНУЛСЯ В СЕТЬ</p>
+                <p class="clipping-text">...после полугода молчания аккаунт снова активен.
+                    Подписчики заметили изменения в стиле подачи...</p>
             </div>
         </section>
 
-        <div class="separator"></div>
-
-        <!-- QUESTS SECTION -->
-        <section id="quests" class="doc-section">
-            <h2 class="section-title">/// ACTIVE QUESTS</h2>
-            <div class="text-block">
-                <div class="quest-item">
-                    <span class="quest-id">Q-001</span>
-                    <span class="quest-desc">COMPLETE PORTFOLIO UPDATE</span>
-                    <span class="quest-status">[IN PROGRESS]</span>
-                </div>
-                <div class="quest-item">
-                    <span class="quest-id">Q-002</span>
-                    <span class="quest-desc">ESTABLISH NEW CONTACTS</span>
-                    <span class="quest-status">[PENDING]</span>
-                </div>
-                <div class="quest-item">
-                    <span class="quest-id">Q-003</span>
-                    <span class="quest-desc">MASTER NEW TECHNIQUE</span>
-                    <span class="quest-status">[FAILED]</span>
-                </div>
+        <!-- ARCHIVE / WORKS [UNCHANGED] -->
+        <section id="archive" class="doc-section fade-in">
+            <h2 class="section-title">/// ЗАКРЫТЫЕ ДЕЛА</h2>
+            <div class="work-entry">
+                <p><strong>ДЕЛО #001</strong> | ВОССТАНОВЛЕНИЕ РЕПУТАЦИИ</p>
+                <p class="note">Статус: Завершено. Клиент удовлетворен.</p>
+            </div>
+            <div class="work-entry">
+                <p><strong>ДЕЛО #002</strong> | АНАЛИЗ КОНКУРЕНТОВ</p>
+                <p class="note">Статус: Завершено. Отчет передан лично.</p>
+            </div>
+            <div class="work-entry">
+                <p><strong>ДЕЛО #003</strong> | ПОИСК ИСТОЧНИКА</p>
+                <p class="note">Статус: Завершено. Источник нейтрализован.</p>
             </div>
         </section>
 
-        <div class="separator"></div>
+        <!-- CONTACTS [UNCHANGED] -->
+        <section id="comms" class="doc-section fade-in">
+            <h2 class="section-title">/// КАНАЛЫ СВЯЗИ</h2>
+            <div class="channels-grid">
 
-        <!-- WORKS SECTION -->
-        <section id="works" class="doc-section">
-            <h2 class="section-title">/// RECORD OF WORKS</h2>
-            <div class="text-block">
-                <div class="work-entry">
-                    <p>REF: 001 | TITLE: [PROJECT NAME] | YEAR: 2024</p>
-                    <p class="note">TECHNIQUE: [MEDIA] | STATUS: ORIGINAL</p>
-                </div>
-                <div class="separator-mini"></div>
-                <div class="work-entry">
-                    <p>REF: 002 | TITLE: [PROJECT NAME] | YEAR: 2024</p>
-                    <p class="note">TECHNIQUE: [MEDIA] | STATUS: ORIGINAL</p>
-                </div>
+                <a href="https://t.me/alexelleaf" class="channel-card link-text">
+                    <span class="channel-name">TELEGRAM</span>
+                    <span class="channel-address">@alexelleaf</span>
+                </a>
+
+                <a href="https://t.me/alextarin" class="channel-card link-text">
+                    <span class="channel-name">TELEGRAM (DM)</span>
+                    <span class="channel-address">@alextarin</span>
+                </a>
+
+                <a href="https://youtube.com/@alexelleaf" class="channel-card link-text">
+                    <span class="channel-name">YOUTUBE</span>
+                    <span class="channel-address">@alexelleaf</span>
+                </a>
+
+                <a href="mailto:your@email.com" class="channel-card link-text">
+                    <span class="channel-name">EMAIL</span>
+                    <span class="channel-address">[ЗАШИФРОВАНО]</span>
+                </a>
+
             </div>
-        </section>
-
-        <div class="separator"></div>
-
-        <!-- CONTACTS SECTION -->
-        <section id="comms" class="doc-section">
-            <h2 class="section-title">/// CHANNELS</h2>
-            <div class="text-block">
-                <ul class="simple-list">
-                    <li>
-                        <span class="label">TELEGRAM:</span>
-                        <a href="https://t.me/alexelleaf" class="link-text">@alexelleaf</a>
-                    </li>
-                    <li>
-                        <span class="label">DM on TELEGRAM:</span>
-                        <a href="https://t.me/alextarin" class="link-text">@alextarin</a>
-                    </li>
-                       <li>
-                        <span class="label">INSTAGRAM*:</span>
-                        <a href="" class="link-text">@alexelleaf</a>
-                    </li>
-                    <li>
-                        <span class="label">YOUTUBE:</span>
-                        <a href="https://youtube.com/@alexelleaf" class="link-text">@alexelleaf</a>
-                    </li>
-                    <li>
-                        <span class="label">EMAIL:</span>
-                        <a href="mailto:your@email.com" class="link-text">your@email.com</a>
-                    </li>
-                </ul>
-            <p class="note2">*запрещён в РФ</p>
-            </div>
+            <p class="note2" style="margin-top: 15px;">*Встречи только по предварительной записи.
+            </p>
         </section>
 
         <!-- FOOTER -->
-        <footer class="doc-footer">
+        <footer class="doc-footer fade-in">
             <div class="separator"></div>
-            <p>&copy; 2024 HEIMLEAF. ALL RIGHTS RESERVED.</p>
-            <p class="end-marker">■ END OF DOCUMENT ■</p>
+            <p>© 2024 HEIMLEAF. ALL RIGHTS RESERVED.</p>
+            <p class="end-marker">■ КОНЕЦ ДОКУМЕНТА ■</p>
+            <br>
+            <p class="note" style="text-align: center;">P.S. Кто-то только что зашел в систему. Это не вы?</p>
         </footer>
-
     </div>
 
     <script src="script.js"></script>
