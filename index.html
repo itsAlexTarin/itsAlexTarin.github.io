@@ -3,308 +3,266 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Бюро Расследований | Дело № 734</title>
+    <title>Частный Детектив | Конфиденциальные Расследования</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Special+Elite&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-<body class="dark-theme">
-    <div class="document-page">
-        <!-- HEADER [UNCHANGED] -->
-        <header class="doc-header fade-in">
-            <div class="meta-row">
-                <span>СТАТУС САЙТА: В РАЗРАБОТКЕ</span>
-                <button id="theme-toggle" class="theme-toggle">на свет</button>
+<body>
+    <!-- Film Grain Overlay -->
+    <div class="film-grain"></div>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <h1>DETECTIVE</h1>
+                <span class="logo-tag">Частные Расследования • С 1947</span>
             </div>
-            <h1 class="main-title typewriter-target">Alex el Leaf [Tarin]</h1>
-            <div class="separator"></div>
-            <nav class="doc-nav">
-                <a href="#profile" class="nav-link">Досье</a>
-                <a href="#log" class="nav-link">Журнал</a>
-                <a href="#transcripts" class="nav-link">Стенограммы</a>
-                <a href="#press" class="nav-link">Пресса</a>
-                <a href="#archive" class="nav-link">Архив</a>
-                <a href="#comms" class="nav-link">Связь</a>
+            <nav class="nav-links">
+                <a href="#services">Услуги</a>
+                <a href="#about">О Себе</a>
+                <a href="#cases">Дела</a>
+                <a href="#contact">Контакты</a>
             </nav>
-        </header>
+            <button class="contact-btn" onclick="showContactModal()">
+                <span>Связаться</span>
+            </button>
+        </div>
+    </header>
 
-        <!-- PROFILE / INTRO [REDESIGNED] -->
-        <section id="profile" class="doc-section fade-in">
-            <h2 class="section-title">/// ЛИЧНОЕ ДЕЛО</h2>
-            
-            <div class="case-file">
-                <div class="case-file-header" tabindex="0">
-                    <span class="file-tab">[ ПАПКА: ОБЩАЯ ИНФОРМАЦИЯ ]</span>
-                    <span class="file-toggle">▼</span>
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h2 class="hero-title">В ТЕНИ ГОРОДА<br>РАБОТАЕТ ПРАВДА</h2>
+                <p class="hero-subtitle">Профессиональные частные расследования. Конфиденциально. Законно. Результативно.</p>
+                <p class="hero-license">Лицензия МВД РФ №12345 от 15.03.2010</p>
+                <button class="cta-btn" onclick="showContactModal()">Заказать Консультацию</button>
+            </div>
+            <div class="hero-divider">
+                <span class="divider-line"></span>
+                <span class="divider-icon">◆</span>
+                <span class="divider-line"></span>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="content-section">
+            <h3 class="section-title">
+                <span class="title-icon">◈</span>
+                Услуги
+            </h3>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">👁</div>
+                    <h4>Наружное Наблюдение</h4>
+                    <p>Слежение за объектом, фиксация перемещений и контактов. Фото и видеоотчёты с временными метками.</p>
+                    <span class="service-tag">От 5000 ₽/час</span>
                 </div>
-                <div class="case-file-content">
-                    <div class="file-grid">
-                        <div class="file-column">
-                            <p class="file-label">ИМЯ</p>
-                            <p class="file-value">Александр</p>
-                        </div>
-                        <div class="file-column">
-                            <p class="file-label">СТАТУС</p>
-                            <p class="file-value">Действующий детектив</p>
-                        </div>
-                        <div class="file-column">
-                            <p class="file-label">СПЕЦИАЛИЗАЦИЯ</p>
-                            <p class="file-value">Цифровые следы, <span class="text-muted">OSINT</span>, восстановление данных</p>
+                <div class="service-card">
+                    <div class="service-icon">📁</div>
+                    <h4>Сбор Информации</h4>
+                    <p>Проверка контрагентов, поиск должников, установление местонахождения лиц.</p>
+                    <span class="service-tag">От 15000 ₽</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💼</div>
+                    <h4>Корпоративные Расследования</h4>
+                    <p>Внутренние проверки, выявление утечек информации, конкурентная разведка.</p>
+                    <span class="service-tag">Индивидуально</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔐</div>
+                    <h4>Проверка Безопасности</h4>
+                    <p>Обнаружение прослушивающих устройств, защита от шпионажа, анализ угроз.</p>
+                    <span class="service-tag">От 25000 ₽</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="content-section">
+            <h3 class="section-title">
+                <span class="title-icon">◈</span>
+                О Себе
+            </h3>
+            <div class="about-layout">
+                <div class="about-content">
+                    <div class="content-block">
+                        <h4>Опыт Работы</h4>
+                        <p>Более 15 лет в правоохранительных органах и частных расследованиях. Специализация на сложных делах, требующих выдержки и профессионализма.</p>
+                        <ul class="info-list">
+                            <li>Лицензия МВД РФ</li>
+                            <li>Более 500 успешных дел</li>
+                            <li>Полная конфиденциальность</li>
+                        </ul>
+                    </div>
+                    <div class="content-block">
+                        <h4>Принципы Работы</h4>
+                        <ul class="info-list">
+                            <li>Законность методов</li>
+                            <li>Анонимность клиента</li>
+                            <li>Гарантия результата</li>
+                            <li>Круглосуточная связь</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-frame">
+                        <div class="image-placeholder">
+                            <span class="placeholder-text">ФОТО<br>ДЕТЕКТИВА</span>
                         </div>
                     </div>
-                    <p class="file-note">Конфиденциальность гарантируется. Все материалы хранятся в зашифрованном виде.</p>
+                    <p class="image-caption">Рабочий кабинет. Москва, 2024</p>
                 </div>
             </div>
+        </section>
 
-            <div class="case-file">
-                <div class="case-file-header" tabindex="0">
-                    <span class="file-tab">[ ПАПКА: МЕТОДОЛОГИЯ ]</span>
-                    <span class="file-toggle">▼</span>
+        <!-- Cases Section -->
+        <section id="cases" class="content-section">
+            <h3 class="section-title">
+                <span class="title-icon">◈</span>
+                Примеры Дел
+            </h3>
+            <div class="cases-grid">
+                <div class="case-card">
+                    <div class="case-header">
+                        <span class="case-number">ДЕЛО №47-2023</span>
+                        <span class="case-status">ЗАВЕРШЕНО</span>
+                    </div>
+                    <h4>Поиск Пропавшего Наследника</h4>
+                    <p>Установление местонахождения единственного наследника крупного состояния. Срок: 14 дней.</p>
+                    <div class="case-footer">
+                        <span class="case-tag">Поиск Людей</span>
+                        <span class="case-date">Март 2023</span>
+                    </div>
                 </div>
-                <div class="case-file-content">
-                    <p class="file-intro">Моя работа строится на трёх принципах:</p>
-                    <ul class="method-list">
-                        <li><span class="method-num">01</span> <span class="method-text">Тщательный <span class="text-highlight">анализ</span> исходных данных</span></li>
-                        <li><span class="method-num">02</span> <span class="method-text">Перекрёстная <span class="text-highlight">проверка</span> источников</span></li>
-                        <li><span class="method-num">03</span> <span class="method-text">Дискретная <span class="text-highlight">передача</span> результатов</span></li>
-                    </ul>
-                    <p class="file-disclaimer">Каждое дело уникально. Подход адаптируется под конкретную ситуацию.</p>
+                <div class="case-card">
+                    <div class="case-header">
+                        <span class="case-number">ДЕЛО №52-2023</span>
+                        <span class="case-status">ЗАВЕРШЕНО</span>
+                    </div>
+                    <h4>Корпоративное Расследование</h4>
+                    <p>Выявление источника утечки коммерческой информации в крупной компании. Срок: 21 день.</p>
+                    <div class="case-footer">
+                        <span class="case-tag">Бизнес</span>
+                        <span class="case-date">Июнь 2023</span>
+                    </div>
                 </div>
-            </div>
-
-            <div class="case-file">
-                <div class="case-file-header" tabindex="0">
-                    <span class="file-tab">[ ПАПКА: УСЛОВИЯ ]</span>
-                    <span class="file-toggle">▼</span>
-                </div>
-                <div class="case-file-content">
-                    <div class="terms-grid">
-                        <div class="term-item">
-                            <span class="term-title">КОНФИДЕНЦИАЛЬНОСТЬ</span>
-                            <span class="term-desc">Абсолютная. Никаких логов, никаких третьих лиц.</span>
-                        </div>
-                        <div class="term-item">
-                            <span class="term-title">КОММУНИКАЦИЯ</span>
-                            <span class="term-desc">Только через защищённые каналы. Без лишних деталей.</span>
-                        </div>
-                        <div class="term-item">
-                            <span class="term-title">ОПЛАТА</span>
-                            <span class="term-desc">Обсуждается индивидуально. Предоплата 50%.</span>
-                        </div>
+                <div class="case-card">
+                    <div class="case-header">
+                        <span class="case-number">ДЕЛО №68-2024</span>
+                        <span class="case-status">ЗАВЕРШЕНО</span>
+                    </div>
+                    <h4>Сбор Доказательств для Суда</h4>
+                    <p>Документирование фактов для бракоразводного процесса. Срок: 30 дней.</p>
+                    <div class="case-footer">
+                        <span class="case-tag">Семейное Право</span>
+                        <span class="case-date">Январь 2024</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- TIMELINE / CASE LOG [UNCHANGED] -->
-        <section id="log" class="doc-section fade-in">
-            <h2 class="section-title">/// ЖУРНАЛ СОБЫТИЙ [ДЕЛО № 734]</h2>
-            <div class="timeline-container">
-                <div class="timeline-line"></div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">12.02.2024</span>
-                        <span class="timeline-event">ПЕРВИЧНЫЙ КОНТАКТ</span>
-                        <span class="timeline-note">Клиент А. оставил конверт в почтовом ящике.
-                            Внутри только ключ и координаты.</span>
-                    </div>
+        <!-- Contact Section -->
+        <section id="contact" class="content-section">
+            <h3 class="section-title">
+                <span class="title-icon">◈</span>
+                Контакты
+            </h3>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <h4>Телефон</h4>
+                    <p>+7 (999) 000-00-00</p>
+                    <span class="contact-note">Доступен 24/7</span>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">03.03.2024</span>
-                        <span class="timeline-event">ВЗЛОМ АРХИВА</span>
-                        <span class="timeline-note">Доступ к серверу получен. Обнаружены аномалии в
-                            логах за 2019 год.</span>
-                    </div>
+                <div class="contact-card">
+                    <div class="contact-icon">✉</div>
+                    <h4>Email</h4>
+                    <p>detective@secure.com</p>
+                    <span class="contact-note">Зашифрованная связь</span>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">15.04.2024</span>
-                        <span class="timeline-event">ТИШИНА</span>
-                        <span class="timeline-note">Связь с информатором В. потеряна. Последний
-                            сигнал зафиксирован в секторе 4.</span>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">ТЕКУЩАЯ ДАТА</span>
-                        <span class="timeline-event">ОЖИДАНИЕ</span>
-                        <span class="timeline-note">Файлы зашифрованы. Ключ найден, но дверь пока
-                            закрыта.</span>
-                    </div>
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <h4>Офис</h4>
+                    <p>Москва, ул. Примерная, 1</p>
+                    <span class="contact-note">По предварительной записи</span>
                 </div>
             </div>
         </section>
+    </main>
 
-        <!-- TRANSCRIPTS / NEWSPAPERS [REDESIGNED] -->
-        <section id="transcripts" class="doc-section fade-in">
-            <h2 class="section-title">/// СТенограммы ПЕРЕГОВОРОВ</h2>
-            
-            <div class="newspaper-stack">
-                
-                <!-- Newspaper 1 -->
-                <article class="newspaper" data-expanded="false">
-                    <div class="newspaper-cover">
-                        <span class="newspaper-title">ЕЖЕДНЕВНЫЙ ОТЧЁТ №47</span>
-                        <span class="newspaper-date">14.03.2024</span>
-                        <span class="newspaper-hint">[ НАЖМИТЕ ДЛЯ ПРОСМОТРА ]</span>
-                    </div>
-                    <div class="newspaper-content">
-                        <header class="np-header">
-                            <h3 class="np-headline">ОПЕРАЦИЯ «ТИХИЙ ШЁПОТ»</h3>
-                            <p class="np-subhead">Эксклюзив: детали закрытого расследования</p>
-                        </header>
-                        <div class="np-image-placeholder">
-                            <span class="np-img-caption">[ФОТО: МЕСТО ВСТРЕЧИ]</span>
-                        </div>
-                        <div class="np-columns">
-                            <p><strong>Источник К.</strong> сообщил о подозрительной активности в секторе <span class="redacted">██████</span>. По его словам, фигуранты использовали <span class="redacted">зашифрованный канал</span> для передачи данных.</p>
-                            <p>Детектив запросил дополнительные доказательства. В ответ было получено сообщение: <em>«Всё идёт по плану. Ждите сигнала»</em>.</p>
-                            <p>На текущий момент статус операции: <span class="text-highlight">ВЫПОЛНЯЕТСЯ</span>. Дальнейшие детали классифицированы.</p>
-                        </div>
-                        <footer class="np-footer">
-                            <span class="np-classification">УРОВЕНЬ ДОСТУПА: [RESTRICTED]</span>
-                        </footer>
-                    </div>
-                </article>
-
-                <!-- Newspaper 2 -->
-                <article class="newspaper" data-expanded="false">
-                    <div class="newspaper-cover">
-                        <span class="newspaper-title">СЛУЖЕБНАЯ ЗАПИСКА №12</span>
-                        <span class="newspaper-date">28.03.2024</span>
-                        <span class="newspaper-hint">[ НАЖМИТЕ ДЛЯ ПРОСМОТРА ]</span>
-                    </div>
-                    <div class="newspaper-content">
-                        <header class="np-header">
-                            <h3 class="np-headline">ПЕРЕХВАТ: ДИАЛОГ С «ТЕНЬЮ»</h3>
-                            <p class="np-subhead">Расшифровка аудиозаписи от 27.03</p>
-                        </header>
-                        <div class="np-image-placeholder">
-                            <span class="np-img-caption">[АУДИО: ВОЛНОВАЯ ФОРМА]</span>
-                        </div>
-                        <div class="np-columns">
-                            <p><strong>02:14</strong> — «Вы уверены, что это безопасно?»</p>
-                            <p><strong>02:17</strong> — «Безопасность — иллюзия. Важно, чтобы следы вели не на нас.»</p>
-                            <p><strong>02:23</strong> — «А если <span class="redacted">███████████</span> узнает?»</p>
-                            <p><strong>02:25</strong> — «Тогда у нас будет проблема. Но пока — <span class="text-highlight">всё под контролем</span>.»</p>
-                            <p><strong>02:31</strong> — [СИГНАЛ ПОТЕРЯН]</p>
-                        </div>
-                        <footer class="np-footer">
-                            <span class="np-classification">СТАТУС: [ВЕРИФИЦИРОВАНО]</span>
-                        </footer>
-                    </div>
-                </article>
-
-                <!-- Newspaper 3 -->
-                <article class="newspaper" data-expanded="false">
-                    <div class="newspaper-cover">
-                        <span class="newspaper-title">МЕМОРАНДУМ №03</span>
-                        <span class="newspaper-date">05.04.2024</span>
-                        <span class="newspaper-hint">[ НАЖМИТЕ ДЛЯ ПРОСМОТРА ]</span>
-                    </div>
-                    <div class="newspaper-content">
-                        <header class="np-header">
-                            <h3 class="np-headline">АНАЛИЗ: ЦИФРОВОЙ СЛЕД</h3>
-                            <p class="np-subhead">Техническое заключение по метаданным</p>
-                        </header>
-                        <div class="np-image-placeholder">
-                            <span class="np-img-caption">[ГРАФИК: ВРЕМЕННАЯ ШКАЛА]</span>
-                        </div>
-                        <div class="np-columns">
-                            <p>Анализ показал аномальную активность в период <span class="text-highlight">03.03–15.03</span>. Зафиксировано <strong>17 попыток</strong> несанкционированного доступа.</p>
-                            <p>Источник трафика: <span class="redacted">████████████████</span>. Использовались прокси-серверы из <span class="redacted">███</span> регионов.</p>
-                            <p>Рекомендация: усилить мониторинг, подготовить <span class="text-muted">контрмеры</span>. Детали — в приложении <span class="redacted">[УДАЛЕНО]</span>.</p>
-                        </div>
-                        <footer class="np-footer">
-                            <span class="np-classification">ПРИЛОЖЕНИЕ: [ОТСУТСТВУЕТ]</span>
-                        </footer>
-                    </div>
-                </article>
-
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-backdrop" onclick="closeContactModal()"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeContactModal()">✕</button>
+            <div class="modal-header">
+                <h2>Связаться Со Мной</h2>
+                <p>Все обращения строго конфиденциальны. Информация не хранится.</p>
             </div>
-        </section>
-
-        <!-- PRESS / CLIPPINGS [UNCHANGED] -->
-        <section id="press" class="doc-section fade-in">
-            <h2 class="section-title">/// ВЫРЕЗКИ ИЗ ПРЕССЫ</h2>
-            <div class="press-clipping">
-                <p class="clipping-source">ВЕСТНИК ТЕХНОЛОГИЙ | 2023</p>
-                <p class="clipping-headline">КРУПНАЯ УТЕЧКА ДАННЫХ ОСТАЛАСЬ НЕРАСКРЫТОЙ</p>
-                <p class="clipping-text">...эксперты полагают, что следы были намеренно затерты
-                    профессионалом высокого класса. Полиция бессильно разводит руками...</p>
-            </div>
-            <div class="press-clipping">
-                <p class="clipping-source">ГОРОДСКОЙ ОБЗОР | 2024</p>
-                <p class="clipping-headline">ТАИНСТВЕННЫЙ БЛОГЕР ВЕРНУЛСЯ В СЕТЬ</p>
-                <p class="clipping-text">...после полугода молчания аккаунт снова активен.
-                    Подписчики заметили изменения в стиле подачи...</p>
-            </div>
-        </section>
-
-        <!-- ARCHIVE / WORKS [UNCHANGED] -->
-        <section id="archive" class="doc-section fade-in">
-            <h2 class="section-title">/// ЗАКРЫТЫЕ ДЕЛА</h2>
-            <div class="work-entry">
-                <p><strong>ДЕЛО #001</strong> | ВОССТАНОВЛЕНИЕ РЕПУТАЦИИ</p>
-                <p class="note">Статус: Завершено. Клиент удовлетворен.</p>
-            </div>
-            <div class="work-entry">
-                <p><strong>ДЕЛО #002</strong> | АНАЛИЗ КОНКУРЕНТОВ</p>
-                <p class="note">Статус: Завершено. Отчет передан лично.</p>
-            </div>
-            <div class="work-entry">
-                <p><strong>ДЕЛО #003</strong> | ПОИСК ИСТОЧНИКА</p>
-                <p class="note">Статус: Завершено. Источник нейтрализован.</p>
-            </div>
-        </section>
-
-        <!-- CONTACTS [UNCHANGED] -->
-        <section id="comms" class="doc-section fade-in">
-            <h2 class="section-title">/// КАНАЛЫ СВЯЗИ</h2>
-            <div class="channels-grid">
-
-                <a href="https://t.me/alexelleaf" class="channel-card link-text">
-                    <span class="channel-name">TELEGRAM</span>
-                    <span class="channel-address">@alexelleaf</span>
-                </a>
-
-                <a href="https://t.me/alextarin" class="channel-card link-text">
-                    <span class="channel-name">TELEGRAM (DM)</span>
-                    <span class="channel-address">@alextarin</span>
-                </a>
-
-                <a href="https://youtube.com/@alexelleaf" class="channel-card link-text">
-                    <span class="channel-name">YOUTUBE</span>
-                    <span class="channel-address">@alexelleaf</span>
-                </a>
-
-                <a href="mailto:your@email.com" class="channel-card link-text">
-                    <span class="channel-name">EMAIL</span>
-                    <span class="channel-address">[ЗАШИФРОВАНО]</span>
-                </a>
-
-            </div>
-            <p class="note2" style="margin-top: 15px;">*запрещён в РФ
-            </p>
-        </section>
-
-        <!-- FOOTER -->
-        <footer class="doc-footer fade-in">
-            <div class="separator"></div>
-            <p>© 2024 HEIMLEAF. ALL RIGHTS RESERVED.</p>
-            <p class="end-marker">■ КОНЕЦ ДОКУМЕНТА ■</p>
-            <br>
-            <p class="note" style="text-align: center;">P.S. Кто-то только что зашел в систему. Это не вы?</p>
-        </footer>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label>Как к Вам обращаться</label>
+                    <input type="text" placeholder="Имя или псевдоним" required>
+                </div>
+                <div class="form-group">
+                    <label>Способ связи</label>
+                    <select required>
+                        <option>Телефон</option>
+                        <option>Email</option>
+                        <option>Мессенджер</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Контактные данные</label>
+                    <input type="text" placeholder="+7 ___ ___-__-__" required>
+                </div>
+                <div class="form-group">
+                    <label>Краткое описание задачи</label>
+                    <textarea placeholder="Опишите ситуацию в общих чертах..." rows="4"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Отправить Запрос</button>
+            </form>
+            <p class="modal-note">🔒 Ваши данные не хранятся и не передаются третьим лицам</p>
+        </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>DETECTIVE</h4>
+                <p>Профессиональные частные расследования.<br>Лицензия №12345 от 15.03.2010</p>
+            </div>
+            <div class="footer-section">
+                <h4>Услуги</h4>
+                <ul class="footer-links">
+                    <li>Наблюдение</li>
+                    <li>Поиск Людей</li>
+                    <li>Проверка Контрагентов</li>
+                    <li>Корпоративные Расследования</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Конфиденциальность</h4>
+                <p>Гарантирую полную анонимность всем клиентам. Работа строго в рамках законодательства РФ.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-divider">
+                <span class="divider-line"></span>
+                <span class="divider-icon">◆</span>
+                <span class="divider-line"></span>
+            </div>
+            <p>© 2025 Частный Детектив. Все права защищены.</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
