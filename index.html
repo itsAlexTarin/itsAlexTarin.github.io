@@ -3,54 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Частный Детектив | Конфиденциальные Расследования</title>
+    <title>БЮРО | Частные Расследования</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Film Grain Overlay -->
-    <div class="film-grain"></div>
+    <div class="red-glow"></div>
+    <div class="scanlines"></div>
     
-    <!-- Header -->
     <header class="header">
         <div class="header-content">
             <div class="logo">
-                <h1>DETECTIVE</h1>
-                <span class="logo-tag">Частные Расследования • С 1947</span>
+                <div class="logo-symbol">◈</div>
+                <h1>БЮРО</h1>
+                <span class="logo-tag">Частные Расследования</span>
             </div>
             <nav class="nav-links">
                 <a href="#services">Услуги</a>
-                <a href="#about">О Себе</a>
-                <a href="#cases">Дела</a>
-                <a href="#contact">Контакты</a>
+                <a href="#about">Досье</a>
+                <a href="#cases">Архив</a>
+                <a href="#contact">Связь</a>
             </nav>
             <button class="contact-btn" onclick="showContactModal()">
-                <span>Связаться</span>
+                <span>Установить Контакт</span>
             </button>
         </div>
     </header>
 
-    <!-- Main Content -->
     <main class="main-content">
-        <!-- Hero Section -->
         <section class="hero-section">
-            <div class="hero-overlay"></div>
             <div class="hero-content">
-                <h2 class="hero-title">В ТЕНИ ГОРОДА<br>РАБОТАЕТ ПРАВДА</h2>
-                <p class="hero-subtitle">Профессиональные частные расследования. Конфиденциально. Законно. Результативно.</p>
-                <p class="hero-license">Лицензия МВД РФ №12345 от 15.03.2010</p>
-                <button class="cta-btn" onclick="showContactModal()">Заказать Консультацию</button>
-            </div>
-            <div class="hero-divider">
-                <span class="divider-line"></span>
-                <span class="divider-icon">◆</span>
-                <span class="divider-line"></span>
+                <p class="hero-classification">СЕКРЕТНО // УРОВЕНЬ ДОСТУПА 5</p>
+                <h2 class="hero-title">МЫ НАХОДИМ<br/>ТО, ЧТО СКРЫТО</h2>
+                <p class="hero-subtitle">Профессиональные частные расследования. Конфиденциальность гарантирована.</p>
+                <div class="hero-meta">
+                    <span class="meta-item">◈ Лицензия МВД №12345</span>
+                    <span class="meta-divider">/</span>
+                    <span class="meta-item">◈ 25+ Лет Опыта</span>
+                    <span class="meta-divider">/</span>
+                    <span class="meta-item">◈ 500+ Дел</span>
+                </div>
+                <button class="cta-btn" onclick="showContactModal()">Инициировать Дело</button>
             </div>
         </section>
 
-        <!-- Services Section -->
         <section id="services" class="content-section">
             <h3 class="section-title">
                 <span class="title-icon">◈</span>
@@ -58,187 +56,235 @@
             </h3>
             <div class="services-grid">
                 <div class="service-card">
+                    <div class="card-classification">СЕКРЕТНО</div>
+                    <div class="service-number">01</div>
                     <div class="service-icon">👁</div>
                     <h4>Наружное Наблюдение</h4>
-                    <p>Слежение за объектом, фиксация перемещений и контактов. Фото и видеоотчёты с временными метками.</p>
-                    <span class="service-tag">От 5000 ₽/час</span>
+                    <p>Профессиональное слежение с использованием современного оборудования.</p>
+                    <ul class="service-features">
+                        <li>Фото и видеофиксация</li>
+                        <li>GPS-мониторинг</li>
+                        <li>Отчётность</li>
+                    </ul>
+                    <span class="service-price">От 5000 ₽/час</span>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">📁</div>
+                    <div class="card-classification">СЕКРЕТНО</div>
+                    <div class="service-number">02</div>
+                    <div class="service-icon">🔍</div>
                     <h4>Сбор Информации</h4>
-                    <p>Проверка контрагентов, поиск должников, установление местонахождения лиц.</p>
-                    <span class="service-tag">От 15000 ₽</span>
+                    <p>Проверка контрагентов, поиск должников через базы данных.</p>
+                    <ul class="service-features">
+                        <li>Проверка юридических лиц</li>
+                        <li>Поиск физических лиц</li>
+                        <li>Архивные запросы</li>
+                    </ul>
+                    <span class="service-price">От 15000 ₽</span>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">💼</div>
+                    <div class="card-classification">СЕКРЕТНО</div>
+                    <div class="service-number">03</div>
+                    <div class="service-icon">🏢</div>
                     <h4>Корпоративные Расследования</h4>
-                    <p>Внутренние проверки, выявление утечек информации, конкурентная разведка.</p>
-                    <span class="service-tag">Индивидуально</span>
+                    <p>Защита бизнес-интересов. Внутренние проверки.</p>
+                    <ul class="service-features">
+                        <li>Внутренний аудит</li>
+                        <li>Выявление мошенничества</li>
+                        <li>Проверка сотрудников</li>
+                    </ul>
+                    <span class="service-price">Индивидуально</span>
                 </div>
                 <div class="service-card">
+                    <div class="card-classification">СЕКРЕТНО</div>
+                    <div class="service-number">04</div>
                     <div class="service-icon">🔐</div>
-                    <h4>Проверка Безопасности</h4>
-                    <p>Обнаружение прослушивающих устройств, защита от шпионажа, анализ угроз.</p>
-                    <span class="service-tag">От 25000 ₽</span>
+                    <h4>Защита от Шпионажа</h4>
+                    <p>Обнаружение прослушивающих устройств и жучков.</p>
+                    <ul class="service-features">
+                        <li>Сканирование помещений</li>
+                        <li>Проверка техники</li>
+                        <li>Анализ угроз</li>
+                    </ul>
+                    <span class="service-price">От 25000 ₽</span>
                 </div>
             </div>
         </section>
 
-        <!-- About Section -->
         <section id="about" class="content-section">
             <h3 class="section-title">
                 <span class="title-icon">◈</span>
-                О Себе
+                Досье
             </h3>
             <div class="about-layout">
-                <div class="about-content">
-                    <div class="content-block">
-                        <h4>Опыт Работы</h4>
-                        <p>Более 15 лет в правоохранительных органах и частных расследованиях. Специализация на сложных делах, требующих выдержки и профессионализма.</p>
-                        <ul class="info-list">
-                            <li>Лицензия МВД РФ</li>
-                            <li>Более 500 успешных дел</li>
-                            <li>Полная конфиденциальность</li>
-                        </ul>
-                    </div>
-                    <div class="content-block">
-                        <h4>Принципы Работы</h4>
-                        <ul class="info-list">
-                            <li>Законность методов</li>
-                            <li>Анонимность клиента</li>
-                            <li>Гарантия результата</li>
-                            <li>Круглосуточная связь</li>
-                        </ul>
-                    </div>
-                </div>
                 <div class="about-image">
                     <div class="image-frame">
                         <div class="image-placeholder">
-                            <span class="placeholder-text">ФОТО<br>ДЕТЕКТИВА</span>
+                            <span class="placeholder-text">ФОТО<br/>ДЕТЕКТИВА</span>
                         </div>
                     </div>
-                    <p class="image-caption">Рабочий кабинет. Москва, 2024</p>
+                    <p class="image-caption">Идентификация: Подтверждена</p>
+                </div>
+                <div class="about-content">
+                    <p class="about-lead">Более 25 лет опыта в правоохранительных органах и частных расследованиях. Специализация на сложных делах.</p>
+                    <p class="about-text">Работаю строго в рамках законодательства РФ. Гарантирую полную конфиденциальность и тщательность расследования.</p>
+                    <div class="credentials-grid">
+                        <div class="credential-item">
+                            <span class="credential-number">500+</span>
+                            <span class="credential-label">Завершённых Дел</span>
+                        </div>
+                        <div class="credential-item">
+                            <span class="credential-number">25</span>
+                            <span class="credential-label">Лет Опыта</span>
+                        </div>
+                        <div class="credential-item">
+                            <span class="credential-number">100%</span>
+                            <span class="credential-label">Конфиденциально</span>
+                        </div>
+                    </div>
+                    <ul class="about-list">
+                        <li>◈ Лицензия МВД РФ</li>
+                        <li>◈ Бывший Сотрудник Правоохранительных Органов</li>
+                        <li>◈ Член Профессиональной Ассоциации</li>
+                        <li>◈ Постоянное Повышение Квалификации</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Cases Section -->
         <section id="cases" class="content-section">
             <h3 class="section-title">
                 <span class="title-icon">◈</span>
-                Примеры Дел
+                Архив Дел
             </h3>
             <div class="cases-grid">
                 <div class="case-card">
                     <div class="case-header">
                         <span class="case-number">ДЕЛО №47-2023</span>
-                        <span class="case-status">ЗАВЕРШЕНО</span>
+                        <span class="case-status case-closed">ЗАВЕРШЕНО</span>
                     </div>
                     <h4>Поиск Пропавшего Наследника</h4>
-                    <p>Установление местонахождения единственного наследника крупного состояния. Срок: 14 дней.</p>
+                    <p>Установление местонахождения через архивы ЗАГС и базы данных.</p>
+                    <div class="case-meta">
+                        <span class="meta-label">Срок:</span>
+                        <span class="meta-value">14 дней</span>
+                        <span class="meta-label">Категория:</span>
+                        <span class="meta-value">Поиск</span>
+                    </div>
                     <div class="case-footer">
-                        <span class="case-tag">Поиск Людей</span>
-                        <span class="case-date">Март 2023</span>
+                        <span class="case-date">15.03.2023</span>
+                        <span class="case-result">✓ Успешно</span>
                     </div>
                 </div>
                 <div class="case-card">
                     <div class="case-header">
-                        <span class="case-number">ДЕЛО №52-2023</span>
-                        <span class="case-status">ЗАВЕРШЕНО</span>
+                        <span class="case-number">ДЕЛО №89-2023</span>
+                        <span class="case-status case-closed">ЗАВЕРШЕНО</span>
                     </div>
                     <h4>Корпоративное Расследование</h4>
-                    <p>Выявление источника утечки коммерческой информации в крупной компании. Срок: 21 день.</p>
+                    <p>Выявление источника утечки коммерческой информации.</p>
+                    <div class="case-meta">
+                        <span class="meta-label">Срок:</span>
+                        <span class="meta-value">21 день</span>
+                        <span class="meta-label">Категория:</span>
+                        <span class="meta-value">Бизнес</span>
+                    </div>
                     <div class="case-footer">
-                        <span class="case-tag">Бизнес</span>
-                        <span class="case-date">Июнь 2023</span>
+                        <span class="case-date">28.06.2023</span>
+                        <span class="case-result">✓ Успешно</span>
                     </div>
                 </div>
                 <div class="case-card">
                     <div class="case-header">
-                        <span class="case-number">ДЕЛО №68-2024</span>
-                        <span class="case-status">ЗАВЕРШЕНО</span>
+                        <span class="case-number">ДЕЛО №156-2024</span>
+                        <span class="case-status case-closed">ЗАВЕРШЕНО</span>
                     </div>
                     <h4>Сбор Доказательств для Суда</h4>
-                    <p>Документирование фактов для бракоразводного процесса. Срок: 30 дней.</p>
+                    <p>Документирование фактов для бракоразводного процесса.</p>
+                    <div class="case-meta">
+                        <span class="meta-label">Срок:</span>
+                        <span class="meta-value">30 дней</span>
+                        <span class="meta-label">Категория:</span>
+                        <span class="meta-value">Семейное Право</span>
+                    </div>
                     <div class="case-footer">
-                        <span class="case-tag">Семейное Право</span>
-                        <span class="case-date">Январь 2024</span>
+                        <span class="case-date">12.01.2024</span>
+                        <span class="case-result">✓ Успешно</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section id="contact" class="content-section">
             <h3 class="section-title">
                 <span class="title-icon">◈</span>
-                Контакты
+                Каналы Связи
             </h3>
             <div class="contact-grid">
                 <div class="contact-card">
                     <div class="contact-icon">📞</div>
                     <h4>Телефон</h4>
-                    <p>+7 (999) 000-00-00</p>
+                    <p class="contact-value">+7 (999) 000-00-00</p>
                     <span class="contact-note">Доступен 24/7</span>
                 </div>
                 <div class="contact-card">
                     <div class="contact-icon">✉</div>
-                    <h4>Email</h4>
-                    <p>detective@secure.com</p>
-                    <span class="contact-note">Зашифрованная связь</span>
+                    <h4>Защищённая Почта</h4>
+                    <p class="contact-value">secure@bureau.ru</p>
+                    <span class="contact-note">Шифрованное соединение</span>
                 </div>
                 <div class="contact-card">
                     <div class="contact-icon">📍</div>
                     <h4>Офис</h4>
-                    <p>Москва, ул. Примерная, 1</p>
-                    <span class="contact-note">По предварительной записи</span>
+                    <p class="contact-value">Москва, ул. Секретная, 19</p>
+                    <span class="contact-note">По записи</span>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Contact Modal -->
     <div id="contactModal" class="modal">
         <div class="modal-backdrop" onclick="closeContactModal()"></div>
         <div class="modal-content">
             <button class="modal-close" onclick="closeContactModal()">✕</button>
             <div class="modal-header">
-                <h2>Связаться Со Мной</h2>
-                <p>Все обращения строго конфиденциальны. Информация не хранится.</p>
+                <p class="modal-classification">СЕКРЕТНО // УРОВЕНЬ ДОСТУПА 5</p>
+                <h2>Установить Контакт</h2>
+                <p>Все обращения строго конфиденциальны.</p>
             </div>
             <form class="contact-form">
-                <div class="form-group">
-                    <label>Как к Вам обращаться</label>
-                    <input type="text" placeholder="Имя или псевдоним" required>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Идентификатор</label>
+                        <input type="text" placeholder="Имя или псевдоним" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Канал Связи</label>
+                        <select required>
+                            <option>Телефон</option>
+                            <option>Email</option>
+                            <option>Личная Встреча</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="form-group">
-                    <label>Способ связи</label>
-                    <select required>
-                        <option>Телефон</option>
-                        <option>Email</option>
-                        <option>Мессенджер</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Контактные данные</label>
+                    <label>Контактные Данные</label>
                     <input type="text" placeholder="+7 ___ ___-__-__" required>
                 </div>
                 <div class="form-group">
-                    <label>Краткое описание задачи</label>
-                    <textarea placeholder="Опишите ситуацию в общих чертах..." rows="4"></textarea>
+                    <label>Описание Дела</label>
+                    <textarea placeholder="Опишите ситуацию..." rows="4"></textarea>
                 </div>
                 <button type="submit" class="submit-btn">Отправить Запрос</button>
             </form>
-            <p class="modal-note">🔒 Ваши данные не хранятся и не передаются третьим лицам</p>
+            <p class="modal-note">🔒 Конфиденциальность гарантирована</p>
         </div>
     </div>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
-                <h4>DETECTIVE</h4>
-                <p>Профессиональные частные расследования.<br>Лицензия №12345 от 15.03.2010</p>
+                <h4>БЮРО</h4>
+                <p>Профессиональные частные расследования.<br/>Лицензия №12345</p>
             </div>
             <div class="footer-section">
                 <h4>Услуги</h4>
@@ -251,7 +297,7 @@
             </div>
             <div class="footer-section">
                 <h4>Конфиденциальность</h4>
-                <p>Гарантирую полную анонимность всем клиентам. Работа строго в рамках законодательства РФ.</p>
+                <p>Гарантирую полную анонимность. Работа в рамках законодательства РФ.</p>
             </div>
         </div>
         <div class="footer-bottom">
@@ -260,7 +306,8 @@
                 <span class="divider-icon">◆</span>
                 <span class="divider-line"></span>
             </div>
-            <p>© 2025 Частный Детектив. Все права защищены.</p>
+            <p>© 2025 БЮРО. Все права защищены.</p>
+            <p class="footer-archive">Дело №2025-001</p>
         </div>
     </footer>
 
