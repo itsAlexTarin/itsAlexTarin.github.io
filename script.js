@@ -1,148 +1,81 @@
-/* =============================================================================
-SCRIPT: NOIR DOCUMENT LOGIC + THEME TOGGLE (FIXED)
-============================================================================= */
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('■ SYSTEM READY ■');
+// Modal Functions
+function showContactModal() {
+    const modal = document.getElementById('contactModal');
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
 
-    /* ---------------------------------------------------------------------
-       THEME TOGGLE - DARK DEFAULT ONLY
-       --------------------------------------------------------------------- */
-    const themeToggle = document.getElementById('theme-toggle');
-    const body = document.body;
+function closeContactModal() {
+    const modal = document.getElementById('contactModal');
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+}
 
-    // Force dark theme on load, ignore system preference
-    if (!body.classList.contains('dark-theme') && !body.classList.contains('light-theme')) {
-        body.classList.add('dark-theme');
+// Close modal on Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeContactModal();
     }
+});
 
-    const updateToggleText = () => {
-        const isLight = body.classList.contains('light-theme');
-        themeToggle.textContent = isLight ? 'ВО ТЬМУ' : 'НА СВЕТ';
-    };
+// Form Submission
+document.querySelector('.contact-form')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    // Here you would typically send data to a server
+    alert('Ваш запрос принят. Я свяжусь с Вами в ближайшее время.');
+    closeContactModal();
+});
 
-    updateToggleText();
-
-    themeToggle.addEventListener('click', () => {
-        if (body.classList.contains('light-theme')) {
-            body.classList.remove('light-theme');
-            body.classList.add('dark-theme');
-        } else {
-            body.classList.remove('dark-theme');
-            body.classList.add('light-theme');
+// Smooth scroll for navigation
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
         }
-        updateToggleText();
     });
+});
 
-    /* ---------------------------------------------------------------------
-       CASE FILE ACCORDION (PROFILE SECTION)
-       --------------------------------------------------------------------- */
-    const caseFileHeaders = document.querySelectorAll('.case-file-header');
+// Header Hide/Show on Scroll
+let lastScrollY = window.scrollY;
+const header = document.querySelector('.header');
+
+window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
     
-    caseFileHeaders.forEach(header => {
-        header.addEventListener('click', () => {
-            const file = header.parentElement;
-            const isExpanded = file.classList.contains('expanded');
-            
-            // Close all others (optional - remove if you want multiple open)
-            document.querySelectorAll('.case-file').forEach(f => {
-                if (f !== file) f.classList.remove('expanded');
-            });
-            
-            // Toggle current
-            file.classList.toggle('expanded', !isExpanded);
-        });
-        
-        // Keyboard support
-        header.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                header.click();
-            }
-        });
-    });
-
-    /* ---------------------------------------------------------------------
-       NEWSPAPER STACK INTERACTION (TRANSCRIPTS)
-       --------------------------------------------------------------------- */
-    const newspapers = document.querySelectorAll('.newspaper');
-    
-    newspapers.forEach(paper => {
-        paper.addEventListener('click', (e) => {
-            // Prevent toggle if clicking on interactive elements inside
-            if (e.target.closest('a') || e.target.closest('.redacted')) return;
-            
-            const isExpanded = paper.dataset.expanded === 'true';
-            
-            // Close others for "stack" effect
-            newspapers.forEach(p => {
-                p.dataset.expanded = 'false';
-            });
-            
-            // Toggle current
-            paper.dataset.expanded = isExpanded ? 'false' : 'true';
-        });
-    });
-
-    /* ---------------------------------------------------------------------
-       TYPEWRITER EFFECT FOR TITLE
-       --------------------------------------------------------------------- */
-    const titleElement = document.querySelector('.typewriter-target');
-    if (titleElement) {
-        const originalText = titleElement.textContent;
-        titleElement.textContent = '';
-        let charIndex = 0;
-
-        const typeWriter = () => {
-            if (charIndex < originalText.length) {
-                titleElement.textContent += originalText.charAt(charIndex);
-                charIndex++;
-                setTimeout(typeWriter, 100);
-            }
-        };
-        setTimeout(typeWriter, 500);
+    if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        header.classList.add('hidden');
+    } else {
+        header.classList.remove('hidden');
     }
+    
+    lastScrollY = currentScrollY;
+});
 
-    /* ---------------------------------------------------------------------
-       SMOOTH SCROLL FOR ANCHORS
-       --------------------------------------------------------------------- */
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-             
-            const target = document.querySelector(targetId);
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
+// Fade-in animation on scroll
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
     });
+}, observerOptions);
 
-    /* ---------------------------------------------------------------------
-       SCROLL REVEAL ANIMATION
-       --------------------------------------------------------------------- */
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -20px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    const animatedElements = document.querySelectorAll(
-        '.case-file, .text-block, .section-title, .press-clipping, .work-entry, .timeline-item'
-    );
-
-    animatedElements.forEach(el => {
-        observer.observe(el);
-    });
+// Observe all cards and blocks
+document.querySelectorAll('.service-card, .content-block, .case-card, .contact-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
 });
