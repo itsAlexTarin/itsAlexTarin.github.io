@@ -3,115 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex el Leaf</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <title>ALEX EL LEAF | Бюро Расследований</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="red-glow"></div>
-    <div class="scanlines"></div>
-    
-    <header class="header">
-        <div class="header-content">
-            <div class="logo">
-                <h1><div class="logo-symbol">◈</div> Alex el Leaf</h1>
-                <span class="logo-tag">Частные Расследования</span>
+    <div class="document-page">
+        <!-- Верхняя панель -->
+        <div class="top-bar">
+            <div class="page-title">
+                <span class="head-marker"></span>
+                ALEX EL LEAF // БЮРО
             </div>
-            <nav class="nav-links">
-                <a href="#services">Услуги</a>
-                <a href="#about">Досье</a>
-                <a href="#cases">Архив</a>
-                <a href="#contact">Связь</a>
-            </nav>
-            <button class="contact-btn" onclick="showContactModal()">
-                <span>Установить Контакт</span>
-            </button>
+            <button id="theme-toggle" class="theme-toggle">ВО ТЬМУ</button>
         </div>
-    </header>
 
-    <main class="main-content">
-        <section class="hero-section">
-            <div class="hero-content">
-                <p class="hero-classification">СЕКРЕТНО // УРОВЕНЬ ДОСТУПА 5</p>
-                <h2 class="hero-title">МЫ НАХОДИМ<br/>ТО, ЧТО СКРЫТО</h2>
-                <p class="hero-subtitle">Профессиональные частные расследования. Конфиденциальность гарантирована.</p>
-                <div class="hero-meta">
-                    <span class="meta-item">◈ Лицензия МВД №12345</span>
-                    <span class="meta-divider">/</span>
-                    <span class="meta-item">◈ 25+ Лет Опыта</span>
-                    <span class="meta-divider">/</span>
-                    <span class="meta-item">◈ 500+ Дел</span>
-                </div>
-                <button class="cta-btn" onclick="showContactModal()">Инициировать Дело</button>
-            </div>
-        </section>
-
-        <section id="services" class="content-section">
+        <!-- ДОСЬЕ (Полная ширина, вверху) -->
+        <section id="about" class="content-section full-width">
             <h3 class="section-title">
-                <span class="title-icon">◈</span>
-                Услуги
-            </h3>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="card-classification">СЕКРЕТНО</div>
-                    <div class="service-number">01</div>
-                    <div class="service-icon">👁</div>
-                    <h4>Наружное Наблюдение</h4>
-                    <p>Профессиональное слежение с использованием современного оборудования.</p>
-                    <ul class="service-features">
-                        <li>Фото и видеофиксация</li>
-                        <li>GPS-мониторинг</li>
-                        <li>Отчётность</li>
-                    </ul>
-                    <span class="service-price">От 5000 ₽/час</span>
-                </div>
-                <div class="service-card">
-                    <div class="card-classification">СЕКРЕТНО</div>
-                    <div class="service-number">02</div>
-                    <div class="service-icon">🔍</div>
-                    <h4>Сбор Информации</h4>
-                    <p>Проверка контрагентов, поиск должников через базы данных.</p>
-                    <ul class="service-features">
-                        <li>Проверка юридических лиц</li>
-                        <li>Поиск физических лиц</li>
-                        <li>Архивные запросы</li>
-                    </ul>
-                    <span class="service-price">От 15000 ₽</span>
-                </div>
-                <div class="service-card">
-                    <div class="card-classification">СЕКРЕТНО</div>
-                    <div class="service-number">03</div>
-                    <div class="service-icon">🏢</div>
-                    <h4>Корпоративные Расследования</h4>
-                    <p>Защита бизнес-интересов. Внутренние проверки.</p>
-                    <ul class="service-features">
-                        <li>Внутренний аудит</li>
-                        <li>Выявление мошенничества</li>
-                        <li>Проверка сотрудников</li>
-                    </ul>
-                    <span class="service-price">Индивидуально</span>
-                </div>
-                <div class="service-card">
-                    <div class="card-classification">СЕКРЕТНО</div>
-                    <div class="service-number">04</div>
-                    <div class="service-icon">🔐</div>
-                    <h4>Защита от Шпионажа</h4>
-                    <p>Обнаружение прослушивающих устройств и жучков.</p>
-                    <ul class="service-features">
-                        <li>Сканирование помещений</li>
-                        <li>Проверка техники</li>
-                        <li>Анализ угроз</li>
-                    </ul>
-                    <span class="service-price">От 25000 ₽</span>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="content-section">
-            <h3 class="section-title">
-                <span class="title-icon">◈</span>
+                <span class="head-marker"></span>
                 Досье
             </h3>
             <div class="about-layout">
@@ -141,112 +50,307 @@
                         </div>
                     </div>
                     <ul class="about-list">
-                        <li>◈ Лицензия МВД РФ</li>
-                        <li>◈ Бывший Сотрудник Правоохранительных Органов</li>
-                        <li>◈ Член Профессиональной Ассоциации</li>
-                        <li>◈ Постоянное Повышение Квалификации</li>
+                        <li><span class="list-marker"></span> Лицензия МВД РФ</li>
+                        <li><span class="list-marker"></span> Бывший Сотрудник Правоохранительных Органов</li>
+                        <li><span class="list-marker"></span> Член Профессиональной Ассоциации</li>
+                        <li><span class="list-marker"></span> Постоянное Повышение Квалификации</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <section id="cases" class="content-section">
-            <h3 class="section-title">
-                <span class="title-icon">◈</span>
-                Архив Дел
-            </h3>
-            <div class="cases-grid">
-                <div class="case-card">
-                    <div class="case-header">
-                        <span class="case-number">ДЕЛО №47-2023</span>
-                        <span class="case-status case-closed">ЗАВЕРШЕНО</span>
+        <div class="main-grid">
+            <!-- ЛЕВАЯ КОЛОНКА: Услуги и Расписание -->
+            <div class="left-column">
+                
+                <!-- Секция Услуг -->
+                <div class="content-section">
+                    <div class="section-title">
+                        <span class="head-marker"></span>
+                        Услуги
                     </div>
-                    <h4>Поиск Пропавшего Наследника</h4>
-                    <p>Установление местонахождения через архивы ЗАГС и базы данных.</p>
-                    <div class="case-meta">
-                        <span class="meta-label">Срок:</span>
-                        <span class="meta-value">14 дней</span>
-                        <span class="meta-label">Категория:</span>
-                        <span class="meta-value">Поиск</span>
+                    
+                    <div class="timeline-item expandable">
+                        <div class="timeline-date">СЕКРЕТНО 01</div>
+                        <div class="timeline-event">Наружное Наблюдение</div>
+                        <div class="timeline-note">
+                            Профессиональное слежение. Фото и видеофиксация.
+                            <span class="expand-arrow">▼</span>
+                        </div>
+                        <div class="expandable-content">
+                            <p><strong>GPS-мониторинг:</strong> Отслеживание перемещений в реальном времени.</p>
+                            <p><strong>Отчётность:</strong> Детальный лог действий объекта.</p>
+                            <p class="text-highlight">От 5000 ₽/час</p>
+                        </div>
                     </div>
-                    <div class="case-footer">
-                        <span class="case-date">15.03.2023</span>
-                        <span class="case-result">✓ Успешно</span>
+
+                    <div class="timeline-item expandable">
+                        <div class="timeline-date">СЕКРЕТНО 02</div>
+                        <div class="timeline-event">Сбор Информации</div>
+                        <div class="timeline-note">
+                            Проверка контрагентов, поиск через базы данных.
+                            <span class="expand-arrow">▼</span>
+                        </div>
+                        <div class="expandable-content">
+                            <p>Проверка юридических и физических лиц. Архивные запросы.</p>
+                            <p class="text-highlight">От 15000 ₽</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item expandable">
+                        <div class="timeline-date">СЕКРЕТНО 03</div>
+                        <div class="timeline-event">Корпоративные Расследования</div>
+                        <div class="timeline-note">
+                            Защита бизнес-интересов. Внутренние проверки.
+                            <span class="expand-arrow">▼</span>
+                        </div>
+                        <div class="expandable-content">
+                            <p>Внутренний аудит, выявление мошенничества, проверка сотрудников.</p>
+                            <p class="text-highlight">Индивидуально</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item expandable">
+                        <div class="timeline-date">СЕКРЕТНО 04</div>
+                        <div class="timeline-event">Защита от Шпионажа</div>
+                        <div class="timeline-note">
+                            Обнаружение прослушивающих устройств.
+                            <span class="expand-arrow">▼</span>
+                        </div>
+                        <div class="expandable-content">
+                            <p>Сканирование помещений, проверка техники, анализ угроз.</p>
+                            <p class="text-highlight">От 25000 ₽</p>
+                        </div>
                     </div>
                 </div>
-                <div class="case-card">
-                    <div class="case-header">
-                        <span class="case-number">ДЕЛО №89-2023</span>
-                        <span class="case-status case-closed">ЗАВЕРШЕНО</span>
+
+                <!-- Секция Расписание -->
+                <div class="content-section">
+                    <div class="section-title">
+                        <span class="head-marker"></span>
+                        Расписание
                     </div>
-                    <h4>Корпоративное Расследование</h4>
-                    <p>Выявление источника утечки коммерческой информации.</p>
-                    <div class="case-meta">
-                        <span class="meta-label">Срок:</span>
-                        <span class="meta-value">21 день</span>
-                        <span class="meta-label">Категория:</span>
-                        <span class="meta-value">Бизнес</span>
+
+                    <div class="schedule-toggle">
+                        <button id="schedule-weekday" class="schedule-btn active">Будни</button>
+                        <button id="schedule-weekend" class="schedule-btn">Выходные</button>
                     </div>
-                    <div class="case-footer">
-                        <span class="case-date">28.06.2023</span>
-                        <span class="case-result">✓ Успешно</span>
-                    </div>
-                </div>
-                <div class="case-card">
-                    <div class="case-header">
-                        <span class="case-number">ДЕЛО №156-2024</span>
-                        <span class="case-status case-closed">ЗАВЕРШЕНО</span>
-                    </div>
-                    <h4>Сбор Доказательств для Суда</h4>
-                    <p>Документирование фактов для бракоразводного процесса.</p>
-                    <div class="case-meta">
-                        <span class="meta-label">Срок:</span>
-                        <span class="meta-value">30 дней</span>
-                        <span class="meta-label">Категория:</span>
-                        <span class="meta-value">Семейное Право</span>
-                    </div>
-                    <div class="case-footer">
-                        <span class="case-date">12.01.2024</span>
-                        <span class="case-result">✓ Успешно</span>
+
+                    <div class="timeline-container">
+                        <div class="timeline-line"></div>
+
+                        <!-- Будни -->
+                        <div class="timeline-item expandable" data-day-type="weekday" data-time-start="07:00" data-time-end="07:15">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">07:00 – 07:15</div>
+                                <div class="timeline-event">Get Up</div>
+                                <div class="timeline-note">
+                                    Do some exercises.
+                                    <span class="expand-arrow">▼</span>
+                                </div>
+                                <div class="expandable-content">
+                                    <p>#1: Встать.</p>
+                                    <p>#2: Заправить постель.</p>
+                                    <p>#3: Walk 10 min.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item expandable" data-day-type="weekday" data-time-start="09:00" data-time-end="12:00">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">09:00 – 12:00</div>
+                                <div class="timeline-event">Рабочая Сессия #1</div>
+                                <div class="timeline-note">
+                                    Глубокая работа над приоритетными задачами.
+                                    <span class="expand-arrow">▼</span>
+                                </div>
+                                <div class="expandable-content">
+                                    <p><strong>Фокус:</strong> Одна ключевая задача без прерываний.</p>
+                                    <p><strong>Метод:</strong> Pomodoro 50/10, отключение уведомлений.</p>
+                                    <p>По завершении — фиксация результата в журнале.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item expandable" data-day-type="weekday" data-time-start="18:30" data-time-end="19:40">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">18:30 – 19:40</div>
+                                <div class="timeline-event">Sport Set #2</div>
+                                <div class="timeline-note">
+                                    Do some exercises.
+                                    <span class="expand-arrow">▼</span>
+                                </div>
+                                <div class="expandable-content">
+                                    <p>Run: 3 min (goal: ?).</p>
+                                    <p>Squats: 30 reps.</p>
+                                    <p>Push-ups (Chest): 10 reps.</p>
+                                    <p>Back: 20 reps.</p>
+                                    <p>Push-ups (Triceps): 10 reps.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Выходные -->
+                        <div class="timeline-item expandable hidden" data-day-type="weekend" data-time-start="07:00" data-time-end="09:00">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">07:00 – 09:00</div>
+                                <div class="timeline-event">Sport</div>
+                                <div class="timeline-note">
+                                    Do some exercises.
+                                    <span class="expand-arrow">▼</span>
+                                </div>
+                                <div class="expandable-content">
+                                    <p>Run: 3 min.</p>
+                                    <p>Squats: 30 reps.</p>
+                                    <p>Push-ups (Chest): 10 reps.</p>
+                                    <p>Back: 10 reps.</p>
+                                    <p>Push-ups (Triceps): 10 reps.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item expandable hidden" data-day-type="weekend" data-time-start="11:00" data-time-end="11:30">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">11:00 – 11:30</div>
+                                <div class="timeline-event">Аффирмации</div>
+                                <div class="timeline-note">
+                                    Прогулка, спорт, встреча с друзьями.
+                                    <span class="expand-arrow">▼</span>
+                                </div>
+                                <div class="expandable-content">
+                                    <p><strong>Цель:</strong> Физическая активность или социальное взаимодействие.</p>
+                                    <p><strong>Варианты:</strong> Велосипед, парк, кафе, настольные игры.</p>
+                                    <p class="samurai-text">Я самурай, мой путь — это стремление...</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <section id="contact" class="content-section">
-            <h3 class="section-title">
-                <span class="title-icon">◈</span>
-                Каналы Связи
-            </h3>
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <div class="contact-icon">📞</div>
-                    <h4>Телефон</h4>
-                    <p class="contact-value">+7 (999) 000-00-00</p>
-                    <span class="contact-note">Доступен 24/7</span>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon">✉</div>
-                    <h4>Защищённая Почта</h4>
-                    <p class="contact-value">secure@bureau.ru</p>
-                    <span class="contact-note">Шифрованное соединение</span>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon">📍</div>
-                    <h4>Офис</h4>
-                    <p class="contact-value">Москва, ул. Секретная, 19</p>
-                    <span class="contact-note">По записи</span>
+            <!-- ПРАВАЯ КОЛОНКА: Архив и Контакты -->
+            <div class="right-column">
+                
+                <!-- АРХИВ ДЕЛ (Полная ширина колонки) -->
+                <section id="cases" class="content-section full-width">
+                    <h3 class="section-title">
+                        <span class="head-marker"></span>
+                        Архив Дел
+                    </h3>
+                    <div class="cases-grid">
+                        <div class="case-card">
+                            <div class="case-header">
+                                <span class="case-number">ДЕЛО №47-2023</span>
+                                <span class="case-status case-closed">ЗАВЕРШЕНО</span>
+                            </div>
+                            <h4>Поиск Пропавшего Наследника</h4>
+                            <p>Установление местонахождения через архивы ЗАГС и базы данных.</p>
+                            <div class="case-meta">
+                                <span class="meta-label">Срок:</span>
+                                <span class="meta-value">14 дней</span>
+                                <span class="meta-label">Категория:</span>
+                                <span class="meta-value">Поиск</span>
+                            </div>
+                            <div class="case-footer">
+                                <span class="case-date">15.03.2023</span>
+                                <span class="case-result">✓ Успешно</span>
+                            </div>
+                        </div>
+                        <div class="case-card">
+                            <div class="case-header">
+                                <span class="case-number">ДЕЛО №89-2023</span>
+                                <span class="case-status case-closed">ЗАВЕРШЕНО</span>
+                            </div>
+                            <h4>Корпоративное Расследование</h4>
+                            <p>Выявление источника утечки коммерческой информации.</p>
+                            <div class="case-meta">
+                                <span class="meta-label">Срок:</span>
+                                <span class="meta-value">21 день</span>
+                                <span class="meta-label">Категория:</span>
+                                <span class="meta-value">Бизнес</span>
+                            </div>
+                            <div class="case-footer">
+                                <span class="case-date">28.06.2023</span>
+                                <span class="case-result">✓ Успешно</span>
+                            </div>
+                        </div>
+                        <div class="case-card">
+                            <div class="case-header">
+                                <span class="case-number">ДЕЛО №156-2024</span>
+                                <span class="case-status case-closed">ЗАВЕРШЕНО</span>
+                            </div>
+                            <h4>Сбор Доказательств для Суда</h4>
+                            <p>Документирование фактов для бракоразводного процесса.</p>
+                            <div class="case-meta">
+                                <span class="meta-label">Срок:</span>
+                                <span class="meta-value">30 дней</span>
+                                <span class="meta-label">Категория:</span>
+                                <span class="meta-value">Семейное Право</span>
+                            </div>
+                            <div class="case-footer">
+                                <span class="case-date">12.01.2024</span>
+                                <span class="case-result">✓ Успешно</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Секция Контакты -->
+                <div class="content-section">
+                    <div class="section-title">
+                        <span class="head-marker"></span>
+                        Каналы Связи
+                    </div>
+
+                    <div class="timeline-item non-expandable">
+                        <div class="timeline-date">📞 ТЕЛЕФОН</div>
+                        <div class="timeline-event">+7 (999) 000-00-00</div>
+                        <div class="timeline-note">Доступен 24/7</div>
+                    </div>
+
+                    <div class="timeline-item non-expandable">
+                        <div class="timeline-date">✉ ПОЧТА</div>
+                        <div class="timeline-event">secure@bureau.ru</div>
+                        <div class="timeline-note">Шифрованное соединение</div>
+                    </div>
+
+                    <div class="timeline-item non-expandable">
+                        <div class="timeline-date">📍 ОФИС</div>
+                        <div class="timeline-event">Москва, ул. Секретная, 19</div>
+                        <div class="timeline-note">По записи</div>
+                    </div>
+
+                    <button class="contact-btn" onclick="showContactModal()">УСТАНОВИТЬ КОНТАКТ</button>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
 
+        <!-- Футер -->
+        <div class="footer">
+            <div class="footer-bottom">
+                <div class="footer-divider">
+                    <div class="divider-line"></div>
+                    <div class="divider-icon">◆</div>
+                    <div class="divider-line"></div>
+                </div>
+                <p>© 2025 БЮРО. Все права защищены.</p>
+                <p class="footer-archive">Дело №2025-001</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно -->
     <div id="contactModal" class="modal">
         <div class="modal-backdrop" onclick="closeContactModal()"></div>
         <div class="modal-content">
             <button class="modal-close" onclick="closeContactModal()">✕</button>
             <div class="modal-header">
-                <p class="modal-classification">СЕКРЕТНО // УРОВЕНЬ ДОСТУПА 5</p>
+                <div class="modal-classification">СЕКРЕТНО // УРОВЕНЬ ДОСТУПА 5</div>
                 <h2>Установить Контакт</h2>
                 <p>Все обращения строго конфиденциальны.</p>
             </div>
@@ -254,11 +358,11 @@
                 <div class="form-row">
                     <div class="form-group">
                         <label>Идентификатор</label>
-                        <input type="text" placeholder="Имя или псевдоним" required>
+                        <input type="text" required>
                     </div>
                     <div class="form-group">
                         <label>Канал Связи</label>
-                        <select required>
+                        <select>
                             <option>Телефон</option>
                             <option>Email</option>
                             <option>Личная Встреча</option>
@@ -267,48 +371,17 @@
                 </div>
                 <div class="form-group">
                     <label>Контактные Данные</label>
-                    <input type="text" placeholder="+7 ___ ___-__-__" required>
+                    <input type="text" required>
                 </div>
                 <div class="form-group">
                     <label>Описание Дела</label>
-                    <textarea placeholder="Опишите ситуацию..." rows="4"></textarea>
+                    <textarea rows="4" required></textarea>
                 </div>
                 <button type="submit" class="submit-btn">Отправить Запрос</button>
+                <p class="modal-note">🔒 Конфиденциальность гарантирована</p>
             </form>
-            <p class="modal-note">🔒 Конфиденциальность гарантирована</p>
         </div>
     </div>
-
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>БЮРО</h4>
-                <p>Профессиональные частные расследования.<br/>Лицензия №12345</p>
-            </div>
-            <div class="footer-section">
-                <h4>Услуги</h4>
-                <ul class="footer-links">
-                    <li>Наблюдение</li>
-                    <li>Поиск Людей</li>
-                    <li>Проверка Контрагентов</li>
-                    <li>Корпоративные Расследования</li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Конфиденциальность</h4>
-                <p>Гарантирую полную анонимность. Работа в рамках законодательства РФ.</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="footer-divider">
-                <span class="divider-line"></span>
-                <span class="divider-icon">◆</span>
-                <span class="divider-line"></span>
-            </div>
-            <p>© 2025 БЮРО. Все права защищены.</p>
-            <p class="footer-archive">Дело №2025-001</p>
-        </div>
-    </footer>
 
     <script src="script.js"></script>
 </body>
