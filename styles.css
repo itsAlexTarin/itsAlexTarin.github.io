@@ -1052,9 +1052,16 @@ CUSTOM SCROLLBAR - THEME AWARE
 ============================================================================= */
 
 /* Для WebKit браузеров (Chrome, Safari, Edge, Opera) */
+/* Скрытие скроллбара для WebKit браузеров */
 ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+/* Скрытие скроллбара для Firefox */
+* {
+    scrollbar-width: none;
 }
 
 ::-webkit-scrollbar-track {
@@ -1074,6 +1081,5 @@ CUSTOM SCROLLBAR - THEME AWARE
 
 /* Для Firefox */
 * {
-    scrollbar-width: thin;
     scrollbar-color: var(--color-border) var(--color-bg);
 }
