@@ -347,7 +347,7 @@ CONTACTS SECTION
   word-break: break-word;
 }
 
-.contact-btn {
+.resume-btn {
   width: 100%;
   background: transparent;
   color: var(--color-accent);
@@ -361,7 +361,7 @@ CONTACTS SECTION
   margin-top: var(--spacing-sm);
 }
 
-.contact-btn:hover {
+.resume-btn:hover {
   background: var(--color-accent);
   color: var(--color-accent-text);
 }
@@ -977,7 +977,7 @@ RESPONSIVE - MOBILE (768px)
     font-size: 11px;
   }
 
-  .contact-btn {
+  .resume-btn {
     padding: 12px;
     font-size: 10px;
   }
